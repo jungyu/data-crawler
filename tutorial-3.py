@@ -41,7 +41,7 @@ def main():
         loguru.logger.info('取出資料表所有資料')
         results = session.query(Source).all()
         for source in results:
-            loguru.logger.info(f'{source.name} {source.domain_url}')
+            loguru.logger.info(f'{source.name} {source.crawler_url}')
     except Exception as e:
         # 發生例外錯誤，還原交易
         session.rollback()
