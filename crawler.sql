@@ -2,8 +2,9 @@ CREATE TABLE `crawler_source` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(90) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` tinytext COLLATE utf8mb4_unicode_ci,
-  `domain_url` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `topics` text COLLATE utf8mb4_unicode_ci,
+  `source_domain` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `crawler_url` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `crawler_schema` text COLLATE utf8mb4_unicode_ci,
   `created` int(10) DEFAULT NULL,
   `modified` int(10) DEFAULT NULL,
@@ -11,7 +12,7 @@ CREATE TABLE `crawler_source` (
   `last_sync` int(10) DEFAULT NULL,
   `enabled` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE `crawler_list` (
   `id` bigint(30) NOT NULL AUTO_INCREMENT,
