@@ -18,13 +18,15 @@ CREATE TABLE `crawler_list` (
   `id` bigint(30) NOT NULL AUTO_INCREMENT,
   `source_id` bigint(20) DEFAULT NULL,
   `topic` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `list_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `article_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `article_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created` int(10) DEFAULT NULL,
   `modified` int(10) DEFAULT NULL,
   `last_sync` int(10) DEFAULT NULL,
   `available` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 CREATE TABLE `crawler_article` (
   `id` bigint(40) NOT NULL AUTO_INCREMENT,
