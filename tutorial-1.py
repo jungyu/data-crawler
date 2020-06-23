@@ -4,7 +4,7 @@ import pymysql
 
 #資料庫連線設定
 #可縮寫db = pymysql.connect("localhost","root","root","30days" )
-db = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd= 'Ilovetw&6@!(', db='wordpress', charset='utf8')
+db = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd= '密碼', db='wordpress', charset='utf8')
 #建立操作游標
 cursor = db.cursor()
 
